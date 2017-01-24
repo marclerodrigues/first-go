@@ -34,10 +34,11 @@ func main() {
   }
 
   for _, argument := range(filteredArgs) {
-    if argument.Key == "name" {
-      name = argument.Value
-    } else if argument.Key == "age" {
-      age = argument.Value
+    switch argument.Key {
+      case "name":
+        name = argument.Value
+      case "age":
+        age = argument.Value
     }
   }
 
